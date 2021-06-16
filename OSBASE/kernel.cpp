@@ -3,6 +3,7 @@
 #include "INCLUDES/Rand.hpp"
 #include "INCLUDES/Collections.hpp"
 #include "INCLUDES/Types.hpp"
+#include "INCLUDES/SCRATCHBIN.hpp"
 #include "INCLUDES/IO.hpp"
 
 extern "C" void kmain();
@@ -15,6 +16,7 @@ using namespace IO;
 
 void kmain() {
     Fiber::SetCollection(); // Set the fiber collection
-    
-    
+    Sprite ParentSprite = Sprite();
+    Fiber MainThread = Fiber(&ParentSprite, SCRATCH, false);
+    MainThread.StartExecuting();
 }

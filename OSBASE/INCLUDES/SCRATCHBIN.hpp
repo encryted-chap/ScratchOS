@@ -1,5 +1,5 @@
 #pragma once
 
-char SCRATCH[] {
+unsigned char SCRATCH[] {
     0x00,
 };
