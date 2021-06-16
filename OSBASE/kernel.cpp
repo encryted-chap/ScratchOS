@@ -8,6 +8,6 @@ using namespace Collections;
 using namespace Fibers;
 
 void kmain() {
-    FiberManager fman = FiberManager();
+    
     
 }

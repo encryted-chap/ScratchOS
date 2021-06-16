@@ -3,7 +3,4 @@ Scratch2CPU: The official documentation
 Each sprite is treated as a Thread (or a fiber, if you want to get technical) in the operating system.
 Every fiber is translated into a binary language that I call the scrasm instruction set.
 
-when flag clicked: defines the entry point for the fiber.
-move(int): increments x by int 
-turn left (int): increments direction by int
-turn right (int): decrements direction by int
+0x0A, [integer] - Gets bytes (# of bytes specified by the number) and places them in a new thread

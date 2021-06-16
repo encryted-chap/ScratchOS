@@ -18,7 +18,9 @@ namespace ScratchKernel::Collections {
         T operator[](int index) {
             return array[index];
         }
-
+        T* ToArray() {
+            return array;
+        }
     private:
         void UpdateLength() {
             for(Length = 0; Length < sizeof(array) / sizeof(T); Length++);
