@@ -38,14 +38,15 @@ namespace ScratchKernel::Fibers {
                         bytes.Add(Binary[INDEX]);
                     }
                     this->NestedFibers.Add(
-                        Fiber(bytes.ToArray())
+                        Fiber(bytes.ToArray(), true)
                     );
                     break;
             }
         }
-        Fiber(unsigned char* Instructions) {
+        Fiber(unsigned char* Instructions, bool isNested=false) {
             Binary.AddRange(Instructions);
-            RegisterFiber(*this);
+            if(!isNested)
+                Fiber::RegisterFiber(*this);
         }
         static void StartExecuting() {
             while(true) {

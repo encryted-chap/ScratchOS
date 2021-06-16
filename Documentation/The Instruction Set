@@ -3,4 +3,4 @@ Scratch2CPU: The official documentation
 Each sprite is treated as a Thread (or a fiber, if you want to get technical) in the operating system.
 Every fiber is translated into a binary language that I call the scrasm instruction set.
 
-0x0A, [integer] - Gets bytes (# of bytes specified by the number) and places them in a new thread
+0x0A, [integer] - Gets bytes (# of bytes specified by the number) and places them in a new thread. The thread is automatically queued for execution
