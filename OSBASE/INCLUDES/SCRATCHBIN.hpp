@@ -1,5 +1,5 @@
 #pragma once
 
 char SCRATCH[] {
-    0x00
+    0x00,
 };

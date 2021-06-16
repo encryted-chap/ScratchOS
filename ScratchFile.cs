@@ -22,7 +22,7 @@ namespace Scratch2cpu.ProjectFile {
                     "\\project.json"
             );
             SProject = Project.FromJSON(this.JSON);
-            Console.Write(JsonSerializer.Serialize(SProject.GetSprites()[0]));
+            
         }
     }
     public class Project {
@@ -43,7 +43,6 @@ namespace Scratch2cpu.ProjectFile {
             foreach(var s in targets) {
                 ret.Add(s);
             }
-                
             return ret;
         }
     }
