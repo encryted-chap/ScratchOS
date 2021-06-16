@@ -1,0 +1,16 @@
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\bin\Debug\net5.0\Scratch2cpu.exe
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\bin\Debug\net5.0\Scratch2cpu.deps.json
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\bin\Debug\net5.0\Scratch2cpu.runtimeconfig.json
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\bin\Debug\net5.0\Scratch2cpu.runtimeconfig.dev.json
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\bin\Debug\net5.0\Scratch2cpu.dll
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\bin\Debug\net5.0\ref\Scratch2cpu.dll
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\bin\Debug\net5.0\Scratch2cpu.pdb
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\Scratch2cpu.csprojAssemblyReference.cache
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\Scratch2cpu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\Scratch2cpu.AssemblyInfoInputs.cache
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\Scratch2cpu.AssemblyInfo.cs
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\Scratch2cpu.csproj.CoreCompileInputs.cache
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\Scratch2cpu.dll
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\ref\Scratch2cpu.dll
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\Scratch2cpu.pdb
+C:\Users\awkward\Desktop\Project Folders\C#\Scratch2cpu\obj\Debug\net5.0\Scratch2cpu.genruntimeconfig.cache
