@@ -14,5 +14,7 @@ using namespace Random;
 using namespace IO;
 
 void kmain() {
+    Fiber::SetCollection(); // Set the fiber collection
+    
     
 }

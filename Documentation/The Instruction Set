@@ -4,3 +4,5 @@ Each sprite is treated as a Thread (or a fiber, if you want to get technical) in
 Every fiber is translated into a binary language that I call the scrasm instruction set.
 
 0x0A, [integer] - Gets bytes (# of bytes specified by the number) and places them in a new thread. The thread is automatically queued for execution
+0x00 - nop, wastes a fiber instruction
+0x01, [int], [int] - add two integer values and store result in accumulator
