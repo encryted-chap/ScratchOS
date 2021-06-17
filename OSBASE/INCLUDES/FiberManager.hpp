@@ -8,9 +8,11 @@ using namespace ScratchKernel::Sprites;
 namespace ScratchKernel::Fibers {
     extern "C" class Fiber;
     static List<Fiber>* FiberCollection;
+    static List<Sprite> AllSprites = List<Sprite>();
     class Fiber {
     private:
         Sprite* attached;
+        int spriteID = 0;
         int INDEX = 0;
         static void StepRecursive(Fiber f) {
             if(f.NestedFibers.Length != 0) {
@@ -37,34 +39,45 @@ namespace ScratchKernel::Fibers {
         static void SetCollection() {
             (*FiberCollection) = List<Fiber>();
         }
-        Fiber(Sprite* spr, unsigned char* Instructions, bool isNested=false) {
-            Binary.AddRange(Instructions);
-            attached = spr;
-            if(!isNested) {
-                Fiber::RegisterFiber(*this);
-                
-            }
-                
-        }
+        
+       Fiber(unsigned char* Instructions, bool isNested=false) {
+           Binary.AddRange(Instructions);
+           
+           SetSprite(Instructions[INDEX++]);
+           if(!isNested)
+               Fiber::RegisterFiber(*this);
+       } 
         static void StartExecuting() {
             while(true) {
                 StepAll();
             }
         }
-
-
+        void SetSprite(int id) {
+            this->spriteID = id;
+            while(AllSprites.Length <= spriteID) 
+                AllSprites.Add(Sprite());
+            this->attached = &AllSprites[spriteID];
+        }
         void Step() {
             unsigned char instruction = Binary[INDEX++];
             switch(instruction) {
                 case 0x0A: {
                     int bytenum = Binary[INDEX++];
                     List<unsigned char> bytes = List<unsigned char>();
+                    
+                    SetSprite(Binary[INDEX++]);
                     for(int i = 0; i < bytenum; i++, INDEX++) {
                         bytes.Add(Binary[INDEX]);
                     }
                     this->NestedFibers.Add(
-                        Fiber(attached ,bytes.ToArray(), true)
+                        Fiber(bytes.ToArray(), true)
                     );
+                    break;
+                }
+                case 0x0B: {
+                    auto spriteid = Binary[INDEX];
+                    attached = &AllSprites[spriteid];
+                    spriteID = spriteid;
                     break;
                 }
                 case 0x00: {
@@ -82,6 +95,7 @@ namespace ScratchKernel::Fibers {
                     
                     break;
                 }
+                
             }
         }
     };

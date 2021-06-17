@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using Scratch2cpu.ProjectFile;
+using Scratch2cpu.Compilation;
 
 namespace Scratch2cpu
 {
@@ -14,6 +15,8 @@ namespace Scratch2cpu
             }
             string FilePath = args[0];
             ScratchFile file = new ScratchFile(FilePath);
+            ScratchCompiler compiler = new ScratchCompiler(file);
+            compiler.Write();
         }
     }
 }

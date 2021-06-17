@@ -41,9 +41,17 @@ namespace Scratch2cpu.Base {
     public class HeadBlock : Block {
         public int x {get; set;}
         public int y {get; set;}
+        Sprite Attached {get; set;}
         
         new public static HeadBlock FromJSON(string JSON) {
             return JsonSerializer.Deserialize<HeadBlock>(JSON);
+        }
+        public Sprite GetAttached() {
+            return this.Attached;
+        }
+        public void SetAttached(Sprite attachto) {
+            this.Attached = attachto;
+            return;
         }
     }
 }
