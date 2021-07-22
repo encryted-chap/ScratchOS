@@ -1675,11 +1675,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\awkward\\Desktop\\Project Folders\\C#\\Scratch2cpu\\Scratch2cpu.csproj",
+      "projectUniqueName": "c:\\Users\\awkward\\Desktop\\Project Folders\\C#\\Scratch2cpu\\Scratch2cpu.csproj",
       "projectName": "Scratch2cpu",
-      "projectPath": "C:\\Users\\awkward\\Desktop\\Project Folders\\C#\\Scratch2cpu\\Scratch2cpu.csproj",
+      "projectPath": "c:\\Users\\awkward\\Desktop\\Project Folders\\C#\\Scratch2cpu\\Scratch2cpu.csproj",
       "packagesPath": "C:\\Users\\awkward\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\awkward\\Desktop\\Project Folders\\C#\\Scratch2cpu\\obj\\",
+      "outputPath": "c:\\Users\\awkward\\Desktop\\Project Folders\\C#\\Scratch2cpu\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

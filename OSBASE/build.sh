@@ -1,15 +1,13 @@
-# assemble/build
-nasm -f elf boot.asm -o bootloader.o
-nasm -f elf ./INCLUDES/RAND.asm -o rand.o
-g++ -w -static -fpermissive -m32 -fno-stack-protector -c kernel.cpp -o kernel.o
+nasm -fbin bootloader/ENTRY.asm -o OS.bin
+cd resources
 
-# link
-ld -m elf_i386 -T link.ld -o kernel.bin bootloader.o kernel.o rand.o
+for res in $( ls && ls ../binfiles ) 
+do 
+    cat $res >> ../OS.bin && echo "appended: $res"
+done
 
-# os booting
-grub-mkrescue -o SCRATCH.iso
-qemu-system-i386 -kernel ./kernel.bin
-
-# cleanup
-rm -r *.o
-rm -r *.bin
+cd ..
+qemu-system-x86_64 -hda OS.bin
+mv OS.bin ../BUILT_OS
+genisoimage -o ../BUILT_OS/OS.iso binfiles
+rm *.bin
